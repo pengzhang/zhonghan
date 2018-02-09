@@ -1,7 +1,7 @@
-package com.cnenvs.zhonghan.common.model;
+package com.tmtget.zhonghan.common.model;
 
 import javax.sql.DataSource;
-import com.cnenvs.zhonghan.common.MainConfig;
+import com.tmtget.zhonghan.common.MainConfig;
 import com.jfinal.kit.PathKit;
 import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.generator.Generator;
@@ -21,12 +21,12 @@ public class _JFinalDemoGenerator {
 	
 	public static void main(String[] args) {
 		// base model 所使用的包名
-		String baseModelPackageName = "com.cnenvs.zhonghan.common.model.base";
+		String baseModelPackageName = "com.tmtget.zhonghan.common.model.base";
 		// base model 文件保存路径
-		String baseModelOutputDir = PathKit.getWebRootPath() + "/src/main/java/cn/hm/common/model/base";
+		String baseModelOutputDir = PathKit.getWebRootPath() + "/src/main/java/com/tmtget/zhonghan/common/model/base";
 		
 		// model 所使用的包名 (MappingKit 默认使用的包名)
-		String modelPackageName = "com.cnenvs.zhonghan.common.model";
+		String modelPackageName = "com.tmtget.zhonghan.common.model";
 		// model 文件保存路径 (MappingKit 与 DataDictionary 文件默认保存路径)
 		String modelOutputDir = baseModelOutputDir + "/..";
 		

@@ -1,4 +1,4 @@
-package com.cnenvs.zhonghan.common.model;
+package com.tmtget.zhonghan.common.model;
 
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 
@@ -16,6 +16,7 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 public class _MappingKit {
 	
 	public static void mapping(ActiveRecordPlugin arp) {
+		arp.addMapping("user", "id", User.class);
 	}
 }
 

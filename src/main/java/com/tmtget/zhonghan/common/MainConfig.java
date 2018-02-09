@@ -1,8 +1,8 @@
-package com.cnenvs.zhonghan.common;
+package com.tmtget.zhonghan.common;
 
-import com.cnenvs.zhonghan.common.model._MappingKit;
-import com.cnenvs.zhonghan.common.route.AdminRoutes;
-import com.cnenvs.zhonghan.common.route.FrontRoutes;
+import com.tmtget.zhonghan.common.model._MappingKit;
+import com.tmtget.zhonghan.common.route.AdminRoutes;
+import com.tmtget.zhonghan.common.route.FrontRoutes;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -59,7 +59,7 @@ public class MainConfig extends JFinalConfig {
 	
 	public void configEngine(Engine me) {
         me.setDevMode(PropKit.getBoolean("devMode", false));
-        me.addSharedFunction("/view/common/layout.html");
+        me.addSharedFunction("/view/common/admin/layout.html");
 	}
 	
 	/**

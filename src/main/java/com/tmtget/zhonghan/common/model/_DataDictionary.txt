@@ -1,0 +1,16 @@
+Table: user
+------------+------------------+------+-----+-------------------+---------
+ Field      | Type             | Null | Key | Default           | Remarks 
+------------+------------------+------+-----+-------------------+---------
+ id         | INT UNSIGNED(10) | NO   | PRI |                   |         
+ username   | VARCHAR(100)     | NO   |     |                   | 用户名     
+ password   | VARCHAR(50)      | NO   |     |                   | 密码:两次md5
+ type       | TINYINT(3)       | NO   |     | 0                 | 用户类型: 0-普通用户,100-超级管理员, 101-管理员
+ compayId   | INT(10)          | NO   |     | 0                 | 所属公司    
+ email      | VARCHAR(100)     | YES  |     |                   | 邮箱      
+ mobile     | VARCHAR(11)      | YES  |     |                   | 手机号     
+ infoStaus  | VARCHAR(50)      | NO   |     |                   | 二进制标志:第一位-邮箱, 第二位-手机号
+ createDate | DATETIME(19)     | NO   |     | CURRENT_TIMESTAMP | 创建时间    
+ updateDate | DATETIME(19)     | NO   |     | CURRENT_TIMESTAMP | 更新时间    
+------------+------------------+------+-----+-------------------+---------
+

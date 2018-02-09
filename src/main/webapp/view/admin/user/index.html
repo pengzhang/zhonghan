@@ -1,0 +1,36 @@
+#@admin()
+
+#define main()
+<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <blockquote class="layui-elem-quote">用户列表</blockquote>
+            <table id="user" class="layui-table"></table>
+        </div>
+
+    </div>
+</div>
+#end
+
+#define js()
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        table.render({
+            elem: '#user'
+            ,url: '/admin/user/list' //数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true, fixed: 'left'}
+                ,{field: 'username', title: '用户名'}
+                ,{field: 'type', title: '用户类型'}
+                ,{field: 'email', title: '邮箱'}
+                ,{field: 'mobile', title: '手机号'}
+                ,{field: 'createDate', title: '注册日期'}
+
+            ]]
+        });
+    });
+</script>
+
+#end
