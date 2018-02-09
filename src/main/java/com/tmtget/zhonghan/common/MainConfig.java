@@ -59,7 +59,8 @@ public class MainConfig extends JFinalConfig {
 	
 	public void configEngine(Engine me) {
         me.setDevMode(PropKit.getBoolean("devMode", false));
-        me.addSharedFunction("/view/common/admin/layout.html");
+		me.addSharedFunction("/view/common/admin/layout.html");
+        me.addSharedFunction("/view/common/admin/admin.html");
 	}
 	
 	/**

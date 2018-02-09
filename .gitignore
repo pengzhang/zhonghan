@@ -12,6 +12,6 @@ buildNumber.properties
 !/.mvn/wrapper/maven-wrapper.jar
 
 .idea/
-jfinal_demo_for_maven.log
+*.log
 zhonghan.iml
 
