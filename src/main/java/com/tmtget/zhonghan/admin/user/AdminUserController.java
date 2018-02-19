@@ -7,6 +7,13 @@ public class AdminUserController extends BaseController {
 
     static UserService service = new UserService();
 
+    public void search() {
+        int page = getParaToInt("page", 1);
+        int size = getParaToInt("limit", 10);
+        String keyword = getPara("keyword", "");
+        renderPageForLayUI(service.search(page, size, keyword));
+    }
+
     public void get() {
         long id = getParaToInt("id");
         renderJson(service.findById(id));

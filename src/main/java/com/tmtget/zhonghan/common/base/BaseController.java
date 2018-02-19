@@ -40,6 +40,8 @@ public abstract class BaseController extends Controller {
 
     public abstract void resume();
 
+    public abstract void search();
+
     /**
      * 默认封装LayUI格式分页数据
      * @param page

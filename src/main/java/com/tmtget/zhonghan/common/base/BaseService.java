@@ -101,4 +101,11 @@ public  interface BaseService<T>{
      */
     public void update(T t);
 
+    /**
+     * 简单搜索
+     * @param keyword
+     * @return
+     */
+    public Page<T> search(int page, int size, String keyword);
+
 }

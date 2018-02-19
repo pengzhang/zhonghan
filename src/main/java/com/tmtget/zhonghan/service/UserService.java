@@ -6,6 +6,10 @@ import com.tmtget.zhonghan.common.model.User;
 
 import java.util.List;
 
+/**
+ * 用户管理
+ * @author zhangpeng
+ */
 public class UserService implements BaseService<User>{
 
     private static final User dao = new User().dao();
@@ -36,6 +40,10 @@ public class UserService implements BaseService<User>{
 
     public void deleteById(long id) {
 
+    }
+
+    public Page<User> search(int page, int size, String keyword) {
+        return dao.paginate(page, size, "select *", "from user where username like '%"+keyword+"%' order by createDate desc");
     }
 
     public void deleteByList(Long[] ids) {

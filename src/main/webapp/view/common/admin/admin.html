@@ -16,17 +16,17 @@
                             <div class="layui-input-inline">
                                 <input id="search" name="search" class="layui-input" type="text" placeholder="关键字">
                             </div>
-                            <a class="layui-btn"><i class="layui-icon">&#xe615;</i></a>
+                            <a class="layui-btn search"><i class="layui-icon">&#xe615;</i></a>
                         </div>
 
                         <div class="layui-inline pull-right">
-                            <a class="layui-btn layui-btn-warm">批量恢复</a>
+                            <a class="layui-btn layui-btn-warm batch_resume">批量恢复</a>
                         </div>
                         <div class="layui-inline pull-right">
-                            <a class="layui-btn layui-btn-danger">批量删除</a>
+                            <a class="layui-btn layui-btn-danger batch_del">批量删除</a>
                         </div>
                         <div class="layui-inline pull-right">
-                            <a class="layui-btn layui-btn-normal">创建#(name)</a>
+                            <a class="layui-btn layui-btn-normal add_obj">创建#(name)</a>
                         </div>
                     </blockquote>
                     #@main_body()
@@ -39,6 +39,13 @@
 
 #define css()
 <style>
+    .layui-side{
+        position: relative;
+    }
+    .layui-layout-admin .layui-side {
+        top: 0px;
+    }
+
     .layui-fluid {
         position: relative;
         margin: 0 auto;
@@ -58,17 +65,19 @@
         margin-top: 0px;
     }
 
-    .pull-right{
+    .pull-right {
         position: relative;
-        float:right;
+        float: right;
         margin-right: 10px;
     }
 
-    .mtop{
+    .mtop {
         margin-top: 0px;
     }
 
 </style>
+
+#@admin_css()
 #end
 
 
